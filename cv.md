@@ -13,8 +13,10 @@
 
 ### **Skills**
 1. *Java Script.*
-2. *Visual Studio Code.*
-3. *Git.*
+2. *CSS.*
+3. *HTML.*
+4. *Visual Studio Code.*
+5. *Git.*
 
 ### **Code Examples**
 `console.log ('Hello World').`

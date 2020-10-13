@@ -12,9 +12,9 @@
 *Able to quickly learn and assimilate information from different sources.*
 
 ### **Skills**
-1. *I study Java Script.*
-2. *I use in work Visual Studio Code.*
-3. *I have the skill to use Git.*
+1. *Java Script.*
+2. *Visual Studio Code.*
+3. *Git.*
 
 ### **Code Examples**
 `console.log ('Hello World').`

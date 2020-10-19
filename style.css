@@ -109,7 +109,7 @@ a[href*="tel"]::before {
     border-radius: 50%;
     vertical-align: middle;
     margin-right: 2px;
-  }
+}
 
 a[href*="tel"]:hover {
     position: relative;

@@ -1,0 +1,227 @@
+body {
+    display: flex;
+    max-width: 1024px;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: rgb(243, 226, 205);
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.name_and_about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.goal {
+    background-color: rgb(236, 206, 167);
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.contacts address {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.first_contact {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.second_conatact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.second_conatact a {
+    margin-bottom: 4px;
+}
+
+a[href*="git"]::before {
+    content: "";
+    background-image: url(https://pngimg.com/uploads/github/github_PNG58.png);
+    display: inline-block;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+  
+a[href*="git"]:hover {
+    position: relative;
+    transform: scale(1.1);
+}
+
+a[href*="mail"]::before {
+    content: "";
+    background-image: url(https://png.pngtree.com/png-clipart/20190520/original/pngtree-email-symbol-icon-png-image_3569787.jpg);
+    display: inline-block;
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+a[href*="mail"]:hover {
+    position: relative;
+    transform: scale(1.1);
+}
+
+a[href*="link"]::before {
+    content: "";
+    background-image: url(https://img1.freepng.ru/20180716/vyj/kisspng-computer-icons-social-media-linkedin-social-networ-communicator-icon-5b4cf1cbd91ad2.3750261115317692918893.jpg);
+    display: inline-block;
+    background-size: cover;
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+a[href*="link"]:hover {
+    position: relative;
+    transform: scale(1.1);
+}
+
+a[href*="tel"]::before {
+    content: "";
+    background-image: url(https://pngimg.com/uploads/phone/phone_PNG49052.png);
+    display: inline-block;
+    background-size: cover;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 2px;
+  }
+
+a[href*="tel"]:hover {
+    position: relative;
+    transform: scale(1.1);
+}
+
+img {
+    border-radius: 15%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.about {
+    display: flex;
+    width: 750px;
+    background-color: rgb(204, 187, 165);
+    border-radius: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
+    align-self: flex-end;
+    text-align: justify;
+}
+
+.professional_skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+}
+
+.skills_and_projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.knowledge {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 40px;
+}
+
+p, li, span, time {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-style: normal;
+    text-decoration: none;
+}
+
+@media (max-width: 760px) {
+    body {
+        align-items: center;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        display: flex;
+    }
+
+    .contacts address {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name_and_about {
+        align-items: center;
+    }
+
+    .professional_skills {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .skills_and_projects {
+        align-items: center;
+    }
+    
+    .knowledge {
+        align-items: center;
+    }
+
+    .professional_skills h2 {
+        text-align: center;
+    }
+
+    .about {
+        width: fit-content;
+    }
+}

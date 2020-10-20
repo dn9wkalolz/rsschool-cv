@@ -15,7 +15,7 @@ header {
     justify-content: space-around;
 }
 
-.name_and_about {
+.name_and_goal {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -200,8 +200,16 @@ a {
         align-items: center;
     }
 
-    .name_and_about {
+    .name_and_goal {
         align-items: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+    
+    .goal {
+        text-align: center;
     }
 
     .professional_skills {

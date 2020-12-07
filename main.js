@@ -4,16 +4,16 @@ const answer = document.getElementById('answer');
 const name = document.getElementById('name');
 
 function showTime() {
-    let currenTime = new Date(),
-        hour = currenTime.getHours(),
-        minute = currenTime.getMinutes(),
-        secund = currenTime.getSeconds();
+    let currentTime = new Date(),
+        hour = currentTime.getHours(),
+        minute = currentTime.getMinutes(),
+        second = currentTime.getSeconds();
         pmAM = '';
     pmAM = hour < 12 ? 'PM' : 'AM';
     hour = hour % 12 || 12;
 
-    if(secund < 10) {
-        secund = `0${secund}`;
+    if(second < 10) {
+        second = `0${second}`;
     }
     if(minute < 10) {
         minute = `0${minute}`;
@@ -21,13 +21,13 @@ function showTime() {
     if(hour < 10) {
         hour = `0${hour}`;
     }
-    time.innerHTML = `${hour} : ${minute} : ${secund} ${pmAM}`;
+    time.innerHTML = `${hour} : ${minute} : ${second} ${pmAM}`;
     setTimeout(showTime, 1000);
 }
 
 function changeBackGroundGreet() {
-    let currenTime = new Date(),
-        hour = currenTime.getHours();   
+    let currentTime = new Date(),
+        hour = currentTime.getHours();   
     if(hour < 12) {
         document.body.style.backgroundImage = "url('https://i.ibb.co/7vDLJFb/morning.jpg')";
         greet.innerHTML = 'Good Morning, ';
@@ -60,23 +60,19 @@ function getAnswer() {
 }
 
 function setName(event) {
-    if (event.type === 'keypress') {
-      if (event.keyCode == 13) {
+    if (event.type === 'keypress' && event.keyCode == 13) {
         localStorage.setItem('name', event.target.innerText);
         name.blur();
-      }
     } else {
       localStorage.setItem('name', event.target.innerText);
     }
 }
 
 function setAnswer(event) {
-    if(event.type === 'keypress') {
-        if(event.keyCode === 13) {
+    if(event.type === 'keypress' && event.keyCode === 13) {
             localStorage.setItem('answer', event.target.innerText);
             answer.blur();
             makeFreedom();
-        }
     }else {
         localStorage.setItem('answer', event.target.innerText);
         makeFreedom();

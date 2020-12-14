@@ -39,11 +39,11 @@ function playSoundAndVideo() {
   if(sound.paused) {
     video.play();
     sound.play();
-    playButton.src = "svg/pause.svg";
+    playButton.src = "./svg/pause.svg";
   }else {
     video.pause();
     sound.pause();
-    playButton.src = "svg/play.svg";
+    playButton.src = "./svg/play.svg";
   }
 }
 
@@ -57,7 +57,7 @@ sound.ontimeupdate = function() {
   if(currentTime >= fakeDuratation) {
     video.pause();
     sound.pause();
-    playButton.src = "svg/play.svg";
+    playButton.src = "./svg/play.svg";
     sound.currentTime = 0;
   }
 }
@@ -67,6 +67,6 @@ replayButton.addEventListener("click", replaySoundAndVideo);
 function replaySoundAndVideo() {
   video.pause();
   sound.pause();
-  playButton.src = "svg/play.svg";
+  playButton.src = "./svg/play.svg";
   sound.currentTime = 0;
 }

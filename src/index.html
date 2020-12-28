@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raindrops</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main__options">
+            <h2>Gameplay</h2>
+            <button data-option="startTrial" class="main__options__button">How to Play</button>
+            <button data-option="start" class="main__options__button">Play</button>
+            <button data-option="restart" class="main__options__button">Restart</button>
+            <h2>Options</h2>
+            <button data-option="startSingleNumber" class="main__options__button">Single Number</button>
+            <button data-option="startTwoDigitNumber" class="main__options__button">Two-digit Number</button>
+            <h2>Operations</h2>
+            <button data-option="startLowLevel" class="main__options__button">Addition/Substraction</button>
+            <button data-option="startHardLevel" class="main__options__button">Division/Multiplication</button>
+            <h2>Screen Mode</h2>
+            <button data-option="toggleFullScreen" class="main__options__button">FullScreen</button>
+        </div>
+        <div class="main__gamezone">
+            <div class="main__gamezone__area">
+                <div class="main__ending__window">
+                    <span class="main__ending__window__score"></span>
+                    <span class="main__ending__window__statistic"></span>
+                    <button data-option="hideEndingWindow" class="main__ending__window__button">OK</button>
+                </div>
+                <div class="main__gamezone__area__fairway">
+                    <div class="main__gamezone__area__fairway__wave"></div>
+                </div>
+            </div>
+        
+            <div class="main__gamezone__controlpanel">
+                <div class="main__gamezone__controlpanel__scoreboard">
+                    <span class="main__gamezone__controlpanel__scoreboard__result">Score: <span class="main__gamezone__controlpanel__scoreboard__result__score"></span></span>
+                </div>
+                <div class="main__gamezone__controlpanel__calculator-result">
+                    <div class="main__gamezone__controlpanel__calculator-result__value">
+                        <span class="main__gamezone__controlpanel__calculator-result__value__input"></span>
+                    </div>
+                    <div class="main__gamezone__controlpanel__calculator-result__keyboard">
+                        <div class="main__gamezone__controlpanel__calculator-result__keyboard__container album">
+                            <div data-key="55" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button">7</div>
+                            <div data-key="56" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button">8</div>
+                            <div data-key="57" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button">9</div>
+                            <div data-key="52" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button">4</div>
+                            <div data-key="53" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button">5</div>
+                            <div data-key="54" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button">6</div>
+                            <div data-key="49" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button">1</div>
+                            <div data-key="50" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button">2</div>
+                            <div data-key="51" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button">3</div>
+                            <div data-key="48" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button wide">0</div>
+                            <div data-key="127" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button additional">Delete</div>
+                        </div>
+                        <div class="main__gamezone__controlpanel__calculator-result__keyboard__container book">
+                            <div data-key="32" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button tall">Clear</div>
+                            <div data-key="13" class="main__gamezone__controlpanel__calculator-result__keyboard__container__button tall">Enter</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__descriptions">
+                    <h3>Reminder: before you start, do not forget to select one of the options and one of the operations!</h3>
+                    <audio src="../sound/beach.mp3" class="backgroundsound"></audio>
+                    <audio src="../sound/jg-032316-sfx-elearning-correct-answer-sound-1.mp3"></audio>
+                    <audio src="../sound/zvukovoy-effekt-nepravilnogo-otveta-wrong-buzzer-sound-effect.mp3"></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -212,7 +212,6 @@ const FW = {
     this.createWeatherToday()
     this.createTemperatureFewDay(fewDaysTemperatureArr)
     this.createIconFewDay(fewDaysIconsArr)
-    console.log(todayData)
   },
 
   createWeatherToday() {
@@ -245,7 +244,7 @@ const FW = {
   async getBackground() {
     try {
       const key = 'f6abce8b06ddadd4f16c2d1e12dbdbb3'
-      const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${key}&tags=night,evening,sunset&tag_mode=all&extras=url_h&format=json&nojsoncallback=1`
+      const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${key}&tags=nature,spring,morning,sunrise&tag_mode=all&extras=url_h&format=json&nojsoncallback=1`
       const result = await fetch(url)
       const data = await result.json()
       this.backgroundsArr = Array.from(data.photos.photo).filter((elem) => elem.url_h !== undefined)

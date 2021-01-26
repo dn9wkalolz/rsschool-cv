@@ -60,7 +60,7 @@ body {
         display: flex;
         &__area {
             display: flex;
-            background-image: url('../../img/f7b6ce2db6c5f5169026a61cef29e2ef.jpg');
+            background-image: url('../img/f7b6ce2db6c5f5169026a61cef29e2ef.jpg');
             background-size: cover;
             flex-basis: 70%;
             position: relative;
@@ -89,7 +89,7 @@ body {
                 height: 10%;
                 width: 100%;
                 z-index: 1;
-                background: url(../../img/bg.png);
+                background: url(../img/bg.png);
                 background-size: cover;
                 &__wave {
                     position: absolute;
@@ -97,7 +97,7 @@ body {
                     height: 19%;
                     top: 0;
                     left: 0;
-                    background: url(../../img/wave.png);
+                    background: url(../img/wave.png);
                     background-size: 20% 100%;
                     animation: wave 8s linear infinite;
                 }
@@ -108,7 +108,7 @@ body {
                     height: 100%;
                     top: 0;
                     left: 0;
-                    background: url(../../img/wave.png);
+                    background: url(../img/wave.png);
                     background-size: 20% 100%;
                     opacity: .2;
                     animation: wave-reverse 8s linear infinite;
@@ -120,7 +120,7 @@ body {
                     height: 100%;
                     top: 0;
                     left: 0;
-                    background: url(../../img/wave.png);
+                    background: url(../img/wave.png);
                     background-size: 20% 100%;
                     opacity: .8;
                     animation-delay: -4s;
@@ -158,7 +158,7 @@ body {
                     }
                     &::before {
                         content: "";
-                        background-image: url('../../img/—Pngtree—cute\ tar\ with\ _4894972.png');
+                        background-image: url('../img/—Pngtree—cute\ tar\ with\ _4894972.png');
                         background-size: cover;
                         display: inline-block;
                         vertical-align: middle;

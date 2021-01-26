@@ -1,3 +1,5 @@
+const { waterfall } = require("async");
+
 const Raindrop = {
     values: {
         fairwayLimit: null,

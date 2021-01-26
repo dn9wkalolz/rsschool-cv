@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(156, 210, 231);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    height: 95%;
+    width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(228, 227, 226);
+    &__options {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        &__button {
+            margin: 10px 10px 10px 0;
+            &.active {
+                border: 2px solid orange; 
+            }
+        }
+    }
+    &__ending__window {
+        display: flex;
+        visibility: hidden;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 250px;
+        height: 120px;
+        top: calc(50% - 60px);
+        left: calc(50% - 125px);
+        z-index: 3;
+        background-color: beige;
+        border-radius: 10px;
+        border: 5px solid rgb(223, 202, 165);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        & span{
+            margin-bottom: 5px;
+        }
+        & button {
+            width: 15%;
+        }
+    }
+    &__gamezone {
+        width: 950px;
+        height: 90%;
+        display: flex;
+        &__area {
+            display: flex;
+            background-image: url('../img/f7b6ce2db6c5f5169026a61cef29e2ef.jpg');
+            background-size: cover;
+            flex-basis: 70%;
+            position: relative;
+            &__raindrop {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 75px;
+                height: 75px;
+                background-color: cadetblue;
+                border-radius: 50%;
+                border: 2px solid rgb(46, 138, 141);
+                font-size: 20px;
+                font-weight: 600;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                transition: .3s;
+                &.bonus{
+                    background-color: orange;
+                    border: 2px solid rgb(192, 127, 5);
+                }
+            }
+            &__fairway {
+                align-self: flex-end;
+                position: relative;
+                height: 10%;
+                width: 100%;
+                z-index: 1;
+                background: url(../img/bg.png);
+                background-size: cover;
+                &__wave {
+                    position: absolute;
+                    width: 100%;
+                    height: 19%;
+                    top: 0;
+                    left: 0;
+                    background: url(../img/wave.png);
+                    background-size: 20% 100%;
+                    animation: wave 8s linear infinite;
+                }
+                &__wave::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: url(../img/wave.png);
+                    background-size: 20% 100%;
+                    opacity: .2;
+                    animation: wave-reverse 8s linear infinite;
+                }
+                &__wave::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: url(../img/wave.png);
+                    background-size: 20% 100%;
+                    opacity: .8;
+                    animation-delay: -4s;
+                    animation: wave 16s linear infinite;
+                }
+            }
+        }
+        &__controlpanel {
+            flex-basis: 30%;
+            background-color: rgb(191, 222, 236);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__scoreboard {
+                background-color: rgb(228, 227, 226);
+                border-bottom-right-radius: 40px;
+                border-bottom-left-radius: 40px;
+                border: 2px solid whitesmoke;
+                height: 35px;
+                margin: 0 auto;
+                width: 85%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &__result {
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: 600;
+                    font-size: 20px;
+                    position: relative;
+                    &__score {
+                        &.active {
+                            transition: color .2s;
+                            color: red;
+                        }
+                    }
+                    &::before {
+                        content: "";
+                        background-image: url('../img/—Pngtree—cute\ tar\ with\ _4894972.png');
+                        background-size: cover;
+                        display: inline-block;
+                        vertical-align: middle;
+                        height: 20px;
+                        width: 20px;
+                        position: absolute;
+                        left: -20px;
+                        transition: .2s;
+                    }
+                    &.active::before {
+                        transition: .2s;
+                        transform: scale(1.4);
+                        left: -25px;
+                    }
+                }
+            }
+            &__calculator-result {
+                display: flex;
+                flex-direction: column;
+                width: 85%;
+                border: 6px solid rgb(197, 183, 163);
+                border-radius: 10px;
+                margin-top: 100px;
+                &__value {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 50px;
+                    height: 100px;
+                    background-color: rgb(236, 226, 226);
+                    border: 2px solid rgb(143, 139, 139);
+                    border-radius: 3px;
+                    &__input {
+                        text-align: center;
+                        width: 140px;
+                        overflow: hidden;
+                    }
+                }
+                &__keyboard {
+                    display: flex;
+                    background-color: rgb(240, 234, 234);
+                    padding-bottom: 4px;
+                    &__container {
+                        &.album{
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+                        &__button {
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            user-select: none;
+                            width: 50px;
+                            height: 50px;
+                            margin: 4px 0 0 4px;
+                            border: 2px solid rgb(133, 130, 130);
+                            border-radius: 5px;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            font-size: 20px;
+                            font-weight: 600;
+                            background-color: rgba(255, 255, 255, 0.4);
+                            transition: .2s;
+                            &.wide {
+                                width: 108px;
+                            }
+                            &.tall{
+                                height: 108px;
+                                margin: 4px 4px 0 0;
+                                font-size: 15px;
+                            }
+                            &.additional {
+                                font-size: 15px;
+                            }
+                            &.active {
+                                transition: .2s;
+                                transform: scale(1.1);
+                                border: 2px solid orange;
+                                background-color: rgba(255, 255, 255, 0.1);
+                            }
+                        }
+                        &.book {
+                            flex-direction: column; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__descriptions {
+        width: 85%;
+        margin: 50px auto;
+    }
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    margin: 0 10px 0 10px;
+}
+
+@keyframes wave {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 900px;
+    }
+  }
+@keyframes wave-reverse {
+    0% {
+        background-position: 900px;
+    }
+    100% {
+        background-position: 0;
+    }
+}

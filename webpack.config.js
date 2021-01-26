@@ -9,8 +9,10 @@ module.exports = {
   mode: 'production',
   entry: './src/script.js',
   output: {
+    publicPath: '',
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[hash][ext][query]'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -24,9 +26,14 @@ module.exports = {
         test: /\.s[a|c]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader?url=false',
+          'css-loader',
+          'resolve-url-loader',
           'sass-loader',
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },

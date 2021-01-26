@@ -1,24 +1,30 @@
-const setIcon = (weatherName) => {
+import Drizzle from '../img/drizzle.svg'
+import Clear from '../img/clear-day.svg'
+import Clouds from '../img/cloudy.svg'
+import Rain from '../img/rain.svg'
+import Fog from '../img/mist.svg'
+import Snow from '../img/snow.svg'
+import Thunderstorm from '../img/thunder.svg'
+import Default from '../img/partly-cloudy-day.svg'
+export function setIcon(weatherName) {
   switch (weatherName) {
     case ('Drizzle'):
-      return '../../img/drizzle.svg'
+      return Drizzle
     case ('Clear'):
-      return '../../img/clear-day.svg'
+      return Clear
     case ('Clouds'):
-      return '../../img/cloudy.svg'
+      return Clouds
     case ('Rain'):
-      return '../../img/rain.svg'
+      return Rain
     case ('Fog'):
-      return '../../img/mist.svg'
+      return Fog
     case ('Haze'):
-      return '../../img/mist.svg'
+      return Fog
     case ('Snow'):
-      return '../../img/snow.svg'
+      return Snow
     case ('Thunderstorm'):
-      return '../../img/thunder.svg'
+      return Thunderstorm
     default:
-      return '../../img/partly-cloudy-day.svg'
+      return Default
   }
 }
-
-module.exports = setIcon

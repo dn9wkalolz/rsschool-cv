@@ -155,7 +155,7 @@ const FW = {
       const data = await opencage.geocode(options)
       this.position.latitude = data.results[0].geometry.lat
       this.position.longitude = data.results[0].geometry.lng
-      const place = data.results[0].components.city || data.results[0].components.county
+      const place = data.results[0].components.city || data.results[0].components.county || data.results[0].components.province || data.results[0].components.place
       this.createPlace(place, data.results[0].components.country)
       this.position.timeZone = data.results[0].annotations.timezone.name
       await this.getWeatherByAPI()

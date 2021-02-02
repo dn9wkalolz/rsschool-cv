@@ -289,22 +289,6 @@ section {
             & p {
                 text-align: justify;
             }
-            & a {
-                display: inline-block;
-                background: crimson;
-                color: #fff;
-                font-size: 18px;
-                font-weight: 500;
-                padding: 8px 16px;
-                margin-top: 20px;
-                border-radius: 6px;
-                border: 2px solid crimson;
-                transition: all 0.3s ease;
-                &:hover {
-                    color: crimson;
-                    background: none;
-                }
-            }
         }
         & .right {
             & .bars {

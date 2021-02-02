@@ -1,0 +1,73 @@
+@media screen and (max-width: 730px) {
+    .wrapper {
+        &__control-panel {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        &__weather {
+            margin-left: 0;
+        }
+        &__map {
+            margin-right: 0;
+        }
+    }
+
+    .control-panel {
+        &__buttons,&__search{
+            margin: 20px 0 0 0;
+        }
+    }
+
+    .weather {
+        &__today {
+            flex-wrap: wrap;
+            justify-content: center;
+            &__temperature {
+                @include font ($size: 15rem, $weight: bold, $height: 16rem); 
+            }
+        }
+        &__country {
+            width: 320px;
+            @include font ($size: 2.5rem, $weight: bold, $height: 3rem);
+        }
+        &__data-time {
+            width: 320px;
+            text-align: center;
+            @include font ($size: 2rem, $weight: bold, $height: 2.5rem);
+        }
+        &__few-day {
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        &__few-day__block {
+            &__day {
+                text-align: center;
+                @include font ($size: 3rem, $weight: bold, $height: 3.5rem);
+            }
+            &__forecast {
+                align-items: center;
+                &__cloudy {
+                    width: 150px;
+                }
+            }
+        }
+    }
+    .search-input {
+        width: 160px;
+    }
+
+    .button.search {
+        width: 75px;
+    }
+
+    .map__coordinates {
+        align-items: center;
+    }
+
+    #map {
+        margin-top: 20px;
+        height: 75vw;
+        width: 90vw;
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper__control-panel">
+            <div class="control-panel__buttons">
+                <div class="button refresh">
+                    <img class="img_refresh" src="<%=require('./img/Vector.svg')%>" alt="refresh img">
+                </div>
+                <div class="button language-droplist">
+                    <select class="language-droplist__options">
+                        <option data-lang="en">EN</option>
+                        <option data-lang="ru">RU</option>
+                    </select>
+                </div>
+                <div class="control-panel__temperature">
+                    <div class="button fahrenheit" data-temp="imperial">°F</div>
+                    <div class="button celsius" data-temp="metric">°C</div>
+                </div>
+            </div>
+            <div class="control-panel__search">
+                <input class="search-input" type="search" placeholder="Search city" pattern="^(?:[A-Za-zА-Яа-я]{2,}(?:(\.\s|'s\s|\s?-\s?|\s)?(?=[A-Za-zА-Яа-я]+))){1,2}(?:[A-Za-zА-Яа-я]+)?$">
+                <div class="button search" data-key="13">
+                    <span class="search__button__text">search</span>
+                    <div class="search__button__bg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper__weather">
+            <div class="weather__country"></div>
+            <div class="weather__data-time"></div>
+            <div class="weather__today">
+                <div class="weather__today__temperature"></div>
+                <div class="weather__today__forecast">
+                    <div class="weather__today__forecast__cloudy">
+                        <img src="" alt="clouds" class="weather__today__forecast__cloudy__img">
+                    </div>
+                    <div class="weather__today__forecast__description"></div>
+                </div>
+            </div>
+            <div class="weather__few-day">
+                <div class="weather__few-day__block">
+                    <div class="weather__few-day__block__day"></div>
+                    <div class="weather__few-day__block__forecast">
+                        <div class="weather__few-day__block__forecast__temperature"></div>
+                        <div class="weather__few-day__block__forecast__cloudy">
+                            <img src="" alt="cloudy" class="weather__few-day__block__forecast__cloudy__img">
+                        </div>
+                    </div>
+                </div>
+                <div class="weather__few-day__block">
+                    <div class="weather__few-day__block__day"></div>
+                    <div class="weather__few-day__block__forecast">
+                        <div class="weather__few-day__block__forecast__temperature"></div>
+                        <div class="weather__few-day__block__forecast__cloudy">
+                            <img src="" alt="cloudy" class="weather__few-day__block__forecast__cloudy__img">
+                        </div>
+                    </div>
+                </div>
+                <div class="weather__few-day__block">
+                    <div class="weather__few-day__block__day"></div>
+                    <div class="weather__few-day__block__forecast">
+                        <div class="weather__few-day__block__forecast__temperature"></div>
+                        <div class="weather__few-day__block__forecast__cloudy">
+                            <img src="" alt="cloudy" class="weather__few-day__block__forecast__cloudy__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper__map">
+            <div id="map" class="map__container"></div>
+            <div class="map__coordinates">
+                <span class="map__coordinates__latitude">Latitude: 52° 25' 43.62708'' N</span>
+                <span class="map__coordinates__longitude">Longitude: 30° 59' 8.01528'' E</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

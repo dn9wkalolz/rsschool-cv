@@ -1,0 +1,297 @@
+@media screen and (max-width: 1020px) {
+    body>:first-child {
+        position: relative;
+        height: 95px;
+    }
+    .header-wrapper {
+        width: 100%;
+        justify-content: space-around;
+        z-index: 1;
+    }
+
+    .slider {
+        &-wrapper {
+            width: 768px;
+            height: 447px;
+        }
+        &-item {
+            min-width: 768px;
+            height: 447px;
+        }
+        &-track>:nth-child(2) {
+            background-size: 769px 447px;
+        }
+        &__button-pre {
+            top: 200px;
+            left: 28px;
+        }  
+        &__button-next {
+            top: 200px;
+            right: 28px;
+        }
+        &__phone-vertical {
+            width: 181px;
+            height: 364px;
+            background: url('../img/slider/phone-vertical-display.svg') 11px 48px no-repeat, url('../img/slider/phone-vertical.svg') no-repeat, url('../img/slider/phone-vertical-shadow.svg') no-repeat;
+            background-size: 142px 251px, 163px 345px, 181px 364px;
+        }
+        &__phone-gorizontal {
+            width: 365px;
+            height: 181px;
+            background: url('../img/slider/phone-horizontal-display.svg') no-repeat 45px 10px, url('../img/slider/phone-horizontal.svg') no-repeat, url('../img/slider/phone-horizontal-shadow.svg') no-repeat;
+            background-size: 251px 142px, 345px 163px, 364px 181px;
+        }
+    }
+
+    .service {
+        &-wrapper {
+            width: 768px;
+            height: 671px;
+        }
+        &__content {
+            width: 687px;
+            height: 153px;
+            margin-top: 40px;
+            margin-bottom: 28px;
+            & .content-text {
+                width: 687px;
+                height: 99px;
+                overflow: hidden;
+            }
+        }
+        & .our-services__advantages {
+            margin-bottom: 63px;
+            & :nth-child(1n+3) {
+                margin-top: 39px;
+            }
+            & .advantages__content {
+                margin-left: 20px;
+                width: 220px;
+                height: 104px;
+            }
+        }
+    }
+
+    .portfolio {
+        &-wrapper {
+            width: 768px;
+            height: 1094px;
+        }
+        &__images {
+            height: 794px;
+        }
+        &__tags {
+            margin-bottom: 28px; 
+        }
+
+    }
+
+    .footer-wrapper {
+        width: 768px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        @include font ($size: 2rem, $weight: bold, $height: 24px, $style:normal);
+    }
+
+    body>:first-child {
+        height: 77px;
+    }
+
+    .header-wrapper {
+        position: fixed;
+        justify-content: center;
+        height: 71px;
+        width: 100%;
+        & .header__navigation-container {
+            display: none;
+        }
+        & .header__logo-container {
+            position: relative;
+            margin-left: 0;
+        }
+    }
+
+    .mobile {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 75%;
+        height: 100%;
+        background-color: $header-blue;
+        transition: 0.3s;
+        box-shadow: 0 85px 0 200px rgba(0, 0, 0, 0.4), 0 0 20px 0 rgba(0, 0, 0, 1);
+        & .hamburger {
+            top: 15px;
+            left: 30px;
+        }
+
+        & .header__navigation-container {
+            width: 205px;
+            height: 260px;
+            margin-top: 232px;
+            margin-left: 71px;
+        }
+        & .navigation-container__row {
+            display: flex;
+            padding: 0;
+            flex-direction: column;
+            &>li {
+                display: block;
+                margin-top: 27px;
+            }
+            &>li>.navigation-container__list-item {
+                &.passive {
+                    margin: 0;
+                    color: $base-white;
+                    @include font ($size: 2.4rem, $weight: bold, $height: 29px, $style:normal);
+                    text-decoration: none;
+                    letter-spacing: -0.035em;
+                }
+                &.active {
+                    margin: 0;
+                    color: $slider-red;
+                    @include font ($size: 2.4rem, $weight: bold, $height: 29px, $style:normal);
+                    text-decoration: none;
+                    letter-spacing: -0.035em;
+                }
+                
+            }
+            &>li:nth-child(1n+2)::before {
+                display: none;
+            }
+        }
+    }
+
+    .hamburger {
+        position: absolute;
+        right: 150px;
+        top: 15px;
+        width: 25px;
+        height: 20px;
+        background: url('../img/burger/Burger-menu-icon.svg');
+    }
+
+    .slider {
+        &-wrapper {
+            width: 375px;
+            height: 218px;
+        }
+        &-item {
+            min-width: 375px;
+            height: 218px;
+        }
+        &-track>:nth-child(2) {
+            background-size: 375px 218px;
+        }
+        &__button-pre {
+            top: 92px;
+            left: 10px;
+            width: 14px;
+            height: 24px;
+            background-size: 14px 24px;
+        }
+        &__button-next {
+            top: 92px;
+            right: 10px;
+            width: 14px;
+            height: 24px;
+            background-size: 14px 24px;
+        }
+        &__phone-vertical {
+            width: 89px;
+            height: 178px;
+            background: url('../img/slider/phone-vertical-display.svg') 5px 24px no-repeat, url('../img/slider/phone-vertical.svg') no-repeat, url('../img/slider/phone-vertical-shadow.svg') no-repeat;
+            background-size: 69px 122px, 79px 168px, 89px 178px;
+        }
+        
+        &__phone-gorizontal {
+            width: 178px;
+            height: 89px;
+            background: url('../img/slider/phone-horizontal-display.svg') no-repeat 22px 5px, url('../img/slider/phone-horizontal.svg') no-repeat, url('../img/slider/phone-horizontal-shadow.svg') no-repeat;
+            background-size: 122px 69px, 168px 79px, 178px 89px;
+        }
+    }
+
+
+
+    .service {
+        &-wrapper {
+            width: 375px;
+            height: 1040px;
+        }
+        &__content {
+            width: 314px;
+            height: 268px;
+            margin-top: 25px;
+            margin-bottom: 0px;
+            & .content-text {
+                width: 314px;
+                height: 180px;
+                overflow: hidden;
+            }
+        }
+    }
+    .our-services__advantages {
+        margin-bottom: 15px;
+        & >:nth-child(1n+2) {
+            margin-top: 15px;
+        }
+        & .advantages__content {
+            margin-left: 20px;
+            width: 220px;
+            height: 104px;
+        }
+    }
+
+
+    .portfolio {
+        &-wrapper {
+            width: 375px;
+            height: 844px;
+        }
+        &__content {
+            margin: 42px 30px 10px 30px;
+            width: 315px;
+            height: 150px;
+            & .content-text {
+               width: 315px;
+               height: 96px; 
+            }
+        }
+        &__images {
+            height: 794px;
+            margin: 25px 30px 42px 30px;
+            gap: 13px;
+            &>:nth-child(1n) {
+                width: 151px;
+                height: 127px;
+            }
+        }
+        &__tags {
+            margin-left: 30px;
+            margin-right: 55px;
+            margin-bottom: 0;
+        }
+
+    }
+
+    .footer {
+        &-wrapper {
+            width: 375px;
+            justify-content: center;
+        }
+        &__media {
+            margin-right: 0;
+        }
+        &__copyright {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    &>:nth-child(1) {
+        background-color: $header-blue;
+    }
+    &>:nth-child(2) {
+        background-color: $slider-red;
+    }
+    &>:nth-child(3) {
+        background-color: $service-white;
+    }
+    &>:nth-child(4) {
+        background-color: $header-blue;
+    }
+    &>:nth-child(5) {
+        background-color: $header-blue;
+    }
+}
+
+h1 {
+    color: $base-white;
+    @extend %font-add;
+    @include font ($size: 2.5rem, $weight: bold, $height: 30px, $style:normal);
+}
+
+.content-name {
+    &_service {
+        width: 174px;
+        height: 36px;
+        overflow: hidden;
+        margin: 0;
+        color: $portfolio-title;
+        @extend %font-add;
+        @include font ($size: 3rem, $weight: 900, $height: 36px, $style:normal);
+    }
+    &_portfolio {
+        width: 174px;
+        height: 40px;
+        overflow: hidden;
+        margin: 0;
+        color: $portfolio-title;
+        @extend %font-add;
+        @include font ($size: 3rem, $weight: 900, $height: 36px, $style:normal);
+    }  
+
+}
+
+h3 {
+    width: 174px;
+    overflow: hidden;
+    margin: 0;
+    color: $portfolio-title;
+    @extend %font-add;
+    @include font ($size: 1.8rem, $weight: 900, $height: 20px, $style:normal);
+}
+
+.content-text {
+    color: $service-description;
+    @extend %font-add;
+    @include font ($size: 1.8rem, $weight: 300, $height: 30px, $style:normal);
+}
+
+.advatages__description {
+    width: 220px;
+    height: 65px;
+    overflow: hidden;
+    text-align: justify;
+    color: $service-description;
+    @extend %font-add;
+    @include font ($size: 1.2rem, $weight: normal, $height: 22px, $style:normal);
+}
+
+.tag__link {
+    display: inline-block;
+    color: $service-description;
+    @extend %font-add;
+    @include font ($size: 1.2rem, $weight: normal, $height: 12px, $style:normal);
+    border: 1px solid $service-description;
+    border-radius: 5px;
+    padding: 4px;
+    margin-right: 6px;
+}
+
+.footer__copyright {
+    color: $portfolio-title;
+    @extend %font-add;
+    @include font ($size: 1.3rem, $weight: 900, $height: 18px, $style:normal);
+}

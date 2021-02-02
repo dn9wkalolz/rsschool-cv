@@ -1,0 +1,28 @@
+span.active {
+    color: $tag-active;
+    border: 1px solid $tag-border;
+}
+
+span:not(.active):hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.order {
+    order: -1;
+}
+
+.rotate {
+    transform: rotate(90deg);
+    z-index: 251;
+    transition: 0.3s;
+    transform-origin: center center;
+}
+
+.slider__button-pre:hover {
+    transform: scale(1.3);
+}
+
+.slider__button-next:hover {
+    transform: scale(1.3);
+}

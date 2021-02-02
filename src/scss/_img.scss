@@ -1,0 +1,131 @@
+.slider__phone {
+    &-vertical {
+        width: 240px;
+        height: 483px;
+        background: url('../img/slider/phone-vertical-display.svg') 14px 65px no-repeat, url('../img/slider/phone-vertical.svg') no-repeat, url('../img/slider/phone-vertical-shadow.svg') no-repeat;
+    }
+    &-gorizontal {
+        width: 483px;
+        height: 240px;
+        background: url('../img/slider/phone-horizontal-display.svg') no-repeat 60px 14px, url('../img/slider/phone-horizontal.svg') no-repeat, url('../img/slider/phone-horizontal-shadow.svg') no-repeat;
+    }
+}
+
+.slider {
+    &-track>:nth-child(2) {
+        background: url('../img/slider/Slider.svg') no-repeat;
+    }
+    &__button-pre {
+        position: absolute;
+        top: 300px;
+        left: 40px;
+        width: 16px;
+        height: 27px;
+        background: url('../img/slider/arrow-left.svg') no-repeat;
+    }
+    &__button-next {
+        position: absolute;
+        top: 300px;
+        right: 40px;
+        width: 16px;
+        height: 27px;
+        background: url('../img/slider/arrow-right.svg') no-repeat;
+    }
+}
+
+.advantages {
+    &__icon1 {
+        width: 60px;
+        height: 60px;
+        background: url('../img/service/services-item-1.svg') no-repeat;
+    }
+    &__icon2 {
+        width: 60px;
+        height: 60px;
+        background: url('../img/service/services-item-2.svg');
+    }
+    &__icon3 {
+        width: 60px;
+        height: 60px;
+        background: url('../img/service/services-item-3.svg');
+    }
+    &__icon4 {
+        width: 60px;
+        height: 60px;
+        background: url('../img/service/services-item-4.svg');
+    }
+    &__icon5 {
+        width: 60px;
+        height: 60px;
+        background: url('../img/service/services-item-5.svg');
+    }
+
+    &__icon6 {
+        width: 60px;
+        height: 60px;
+        background: url('../img/service/services-item-6.svg');
+    }
+}
+
+.image__container {
+    width: 216px;
+    height: 183px;
+    &.image1 {
+        background: url('../img/portfolio/portfolio-1.svg');
+    }
+    &.image2 {
+        background: url('../img/portfolio/portfolio-2.svg');
+    }
+    &.image3 {
+        background: url('../img/portfolio/portfolio-3.svg');
+    }
+    &.image4 {
+        background: url('../img/portfolio/portfolio-4.svg');
+    }
+    &.image5 {
+        background: url('../img/portfolio/portfolio-5.svg');
+    }
+    &.image6 {
+        background: url('../img/portfolio/portfolio-6.svg');
+    }
+    &.image7 {
+        background: url('../img/portfolio/portfolio-7.svg');
+    }
+    &.image8 {
+        background: url('../img/portfolio/portfolio-8.svg');
+    }
+    &.image9 {
+        background: url('../img/portfolio/portfolio-9.svg');
+    }
+    &.image10 {
+        background: url('../img/portfolio/portfolio-10.svg');
+    }
+    &.image11 {
+        background: url('../img/portfolio/portfolio-11.svg');
+    }
+    &.image12 {
+        background: url('../img/portfolio/portfolio-12.svg');
+    }
+}
+
+.ico {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    &.facebook {
+
+        background: url('../img/footer/ico-facebook.svg');
+    }
+    &.google {
+
+        background: url('../img/footer/ico-google-plus.svg');
+    }
+    &.twitter {
+
+        background: url('../img/footer/ico-twitter.svg');
+    }
+    &.linkedin {
+
+        background: url('../img/footer/ico-linkedin.svg');
+    }
+}

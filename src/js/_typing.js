@@ -4,7 +4,7 @@ function delay(delayTime) {
 
 async function delayedDelete(word, elem) {
   const wordArr = word.split('')
-  for (const letter of word) {
+  for (let i = 0; i < word.length; i++) {
     await delay(100)
     wordArr.pop()
     elem.innerText = wordArr.join('')
@@ -13,8 +13,7 @@ async function delayedDelete(word, elem) {
 
 async function delayedPrint(word, elem) {
   const wordArr = word.split('')
-  const printedWord = ''
-  for (const letter of word) {
+  for (let i = 0; i < word.length; i++) {
     await delay(200)
     elem.innerText += wordArr.shift()
   }

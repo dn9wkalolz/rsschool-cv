@@ -34,7 +34,7 @@ html {
         & .menu li a:hover {
             color: #fff;
         }
-        & .logo a span {
+        & .logo span span {
             color: #fff;
         }
     }
@@ -43,7 +43,7 @@ html {
         align-items: center;
         justify-content: space-between;
     }
-    & .logo a {
+    & .logo span {
         color: #fff;
         font-size: 35px;
         font-weight: 600;
@@ -321,19 +321,10 @@ section {
             & .html::before {
                 width: 90%;
             }
-            & .css::before {
+            & .css::before, .js::before {
                 width: 70%;
             }
-            & .js::before {
-                width: 70%;
-            }
-            & .sass::before {
-                width: 80%;
-            }
-            & .webpack::before {
-                width: 80%;
-            }
-            & .git::before {
+            & .sass::before, .webpack::before, .git::before {
                 width: 80%;
             }
         }

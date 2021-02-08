@@ -15,4 +15,4 @@ module.exports = {
     semi: ['error', 'never'],
     'object-curly-newline': ['error', 'always'],
   },
-};
+}
